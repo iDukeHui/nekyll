@@ -15,7 +15,8 @@
     "server",
     "Assets"
   ],
-  "author": "iDukeHui",
+  "auth": "iDukeHui",
+  "email": "iDukeHui@gmail.com",
   "license": "MIT",
   "dependencies": {
   }
