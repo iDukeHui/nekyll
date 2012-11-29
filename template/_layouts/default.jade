@@ -1,0 +1,50 @@
+!!! 5
+html
+    head
+        meta(charset="utf-8")
+        title #{page.title}
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="")
+        meta(name="author", content="")
+
+        // Le styles
+        link(href="/bootstrap/css/bootstrap.css", rel="stylesheet")
+        style
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        link(href="/bootstrap/css/bootstrap-responsive.css", rel="stylesheet")
+        
+        //if lt IE 9
+            script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+        
+        link(href="/css/style.css", rel="stylesheet")
+        
+
+    body
+        - var active = {home:'', about:''}
+        - if (page.url == '/index.html')
+            - active.home = 'active'
+        - else if(page.url == '/about.html')
+            - active.about = 'active'
+        - else
+            - var vvv = page.url
+        div.navbar.navbar-inverse.navbar-fixed-top
+            div.navbar-inner
+                div.container
+                    a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.brand(href="/") #{site.name}
+                    div.nav-collapse.collapse
+                        ul.nav
+                            li(class="#{active.home}")
+                                a(href="/") Home
+                            li(class="#{active.about}")
+                                a(href="/about.html") About
+        div.container
+            block content
+            footer
+                p &copy; Company 2012

@@ -1,0 +1,5 @@
+require './config'
+require './include'
+require './assets'
+require './page'
+require './project'

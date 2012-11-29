@@ -1,0 +1,33 @@
+---
+title: nekyll template
+layout: default
+---
+    div.hero-unit
+        h1 hello, world
+        p this a template for nekyll, nekyll is a simple, blog aware, static site generator.
+        p
+            a.btn.btn-primary.btn-large Lear more &raquo;
+        p
+            h3 Posts
+            ol
+                - locals.posts.forEach(function(item) {
+                    li
+                        a(href="#{item.url}") #{item.title}
+                -})
+    div.row
+        div.span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+            p
+                a.btn View details &raquo;
+        div.span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+            p
+                a.btn View details &raquo;
+        div.span4
+            h2 Heading
+            p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
+            p
+                a.btn View details &raquo;
+    hr
